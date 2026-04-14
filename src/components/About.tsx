@@ -6,7 +6,7 @@ import { Search, ArrowUpRight } from "lucide-react";
 const services = [
     {
         title: "Web Development",
-        projects: "50+ Projects Done",
+        projects: "20+ Projects Done",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80",
     },
     {
