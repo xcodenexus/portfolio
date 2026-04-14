@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark rounded background -->
+  <rect width="32" height="32" rx="7" fill="#111111"/>
+  <!-- Same 4-rect asterisk used in Hero.tsx, scaled to 32×32 -->
+  <g transform="translate(16,16)">
+    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00"/>
+    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(45)"/>
+    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(90)"/>
+    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(135)"/>
+  </g>
+</svg>
