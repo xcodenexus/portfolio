@@ -5,22 +5,6 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 
 const projects = [
     {
-        name: "SecureVault",
-        desc: "A high-security note-taking app with end-to-end encryption and biometric unlock.",
-        tech: ["Next.js", "TypeScript", "Tailwind", "Firebase"],
-        github: "#",
-        live: "#",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        name: "AI CodeGen",
-        desc: "AI-powered tool that generates boilerplate code from natural language prompts.",
-        tech: ["React", "Python", "OpenAI API", "HuggingFace"],
-        github: "#",
-        live: "#",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    },
-    {
         name: "ThreatMonitor",
         desc: "Real-time web vulnerability scanner that checks for OWASP Top 10 issues.",
         tech: ["Node.js", "Express", "Cybersecurity", "React"],
