@@ -16,7 +16,7 @@ export default function Hero() {
                     className="z-10"
                 >
                     <div className="flex items-center gap-2 mb-8 uppercase tracking-[0.2em] font-bold text-xs text-gray-500">
-                        <span className="text-accent text-lg">✱</span> Full Stack Developer <span className="text-accent text-lg">✱</span> Software Engineer
+                        <span className="text-accent text-lg">✱</span> Full-Stack Developer | Building Secure Software & Web Applications
                     </div>
 
                     <h1 className="text-[4rem] md:text-[6.5rem] font-black leading-[1.1] mb-10 tracking-tight text-black">
