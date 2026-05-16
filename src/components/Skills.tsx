@@ -16,17 +16,17 @@ const skills = [
 
 const experiences = [
     {
-        year: "2018 - 2026",
+        year: "2019 - Present",
         role: "Full Stack Developer",
         company: "xcodenexus",
     },
     {
         year: "2017 - 2025",
-        role: "UI/UX Designer / Graphics Designer",
+        role: "Graphic Designer",
         company: "xcodenexus",
     },
     {
-        year: "2017 - Present",
+        year: "2017 - 2024",
         role: "Web Designer",
         company: "xcodenexus",
     },
