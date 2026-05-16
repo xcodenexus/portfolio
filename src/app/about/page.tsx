@@ -83,10 +83,10 @@ export default function AboutPage() {
                                     My story with computers started in the early 2000s in a rural part of Oyo State, where computers were rare. My father owned a computer shop, and I'd spend time watching people use these fascinating machines. That's where the seed was planted.
                                 </p>
                                 <p>
-                                    Around 2013, my parents brought home two laptops — an HP 655 with 2GB of RAM — purchased on installment. They weren't meant for me, but I used them secretly whenever I could. Then one day, I accidentally corrupted the Windows OS.
+                                    Around 2013, my parents brought home two laptops (an HP 655 with 2GB of RAM), purchased on installment. They weren't meant for me, but I used them secretly whenever I could. Then one day, I accidentally corrupted the Windows OS.
                                 </p>
                                 <p>
-                                    That moment — debugging a broken system and bringing it back to life — made me fall in love with computers.
+                                    That moment of debugging a broken system and bringing it back to life made me fall in love with computers.
                                 </p>
                             </div>
                         </motion.div>
@@ -105,13 +105,13 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-6 text-gray-500 leading-relaxed font-medium">
                                 <p>
-                                    When I got admission to Federal Government College Ogbomoso, everything shifted. For six years, I finally had consistent access to computers and the internet — something I didn't have at home.
+                                    When I got admission to Federal Government College Ogbomoso, everything shifted. For six years, I finally had consistent access to computers and the internet, something I didn't have at home.
                                 </p>
                                 <p>
                                     Back then, electricity was scarce, so I'd strategically charge my laptop during church services and use those windows of time to learn. It wasn't ideal, but it made me resourceful.
                                 </p>
                                 <p>
-                                    At school, we had a Cisco ICT program where I studied operating systems, networking basics, and IoT. I also learned web development through tutorials and by editing templates — skills that serve me well today.
+                                    At school, we had a Cisco ICT program where I studied operating systems, networking basics, and IoT. I also learned web development through tutorials and by editing templates, skills that serve me well today.
                                 </p>
                             </div>
                         </motion.div>
@@ -140,7 +140,7 @@ export default function AboutPage() {
                                     I studied Computer Science at LAUTECH, Ogbomoso. The journey wasn't easy, but it deepened my understanding of how systems work at a fundamental level.
                                 </p>
                                 <p>
-                                    After graduation, I've been shipping projects, learning in public, and building tools that solve real problems — from web applications to security tooling.
+                                    After graduation, I've been shipping projects, learning in public, and building tools that solve real problems, from web applications to security tooling.
                                 </p>
                             </div>
                         </motion.div>
@@ -162,10 +162,10 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-6 text-gray-400 leading-relaxed font-medium">
                                 <p>
-                                    My commitment to cybersecurity became real when my mom was socially engineered — someone targeted her to steal her OTP and gain access to her accounts. I was able to help her understand what happened and prevent the attack.
+                                    My commitment to cybersecurity became real when my mom was socially engineered. Someone targeted her to steal her OTP and gain access to her accounts. I was able to help her understand what happened and prevent the attack.
                                 </p>
                                 <p>
-                                    That moment showed me that security isn't just about technical exploits — it's about protecting real people from harm. Now, I build with security in mind from day one.
+                                    That moment showed me that security isn't just about technical exploits. It's about protecting real people from harm. Now, I build with security in mind from day one.
                                 </p>
                             </div>
                             <blockquote className="mt-10 border-l-2 border-accent pl-8">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                                     I'm curious about spirituality, ancient history, and civilizations. I spend time thinking about how technology reflects and shapes human consciousness, and how ancient wisdom systems might offer different perspectives on modern problems.
                                 </p>
                                 <p>
-                                    I'm also exploring crypto trading and the economics of decentralized systems — the intersection of technology and financial sovereignty is something I find deeply compelling.
+                                    I'm also exploring crypto trading and the economics of decentralized systems. The intersection of technology and financial sovereignty is something I find deeply compelling.
                                 </p>
                                 <p>
                                     Above all, I'm passionate about making tech accessible to non-technical people — helping others understand how computers work, why security matters, and how technology connects with different perspectives on the world.
@@ -276,7 +276,7 @@ export default function AboutPage() {
                                 Interested in Building Together?
                             </h2>
                             <p className="text-gray-400 text-lg leading-relaxed font-medium max-w-md">
-                                If you're interested in building secure software, exploring security automation, or just want to chat about technology and ideas — I'd love to hear from you.
+                                If you're interested in building secure software, exploring security automation, or just want to chat about technology and ideas, I'd love to hear from you.
                             </p>
                         </motion.div>
 
