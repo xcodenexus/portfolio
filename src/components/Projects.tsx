@@ -5,6 +5,14 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 
 const projects = [
     {
+        name: "Lumen",
+        desc: "A polished frontend for a fictional AI product called Lumen, a workspace for building and running custom AI agents.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+        github: "https://github.com/xcodenexus/Lumen",
+        live: "#",
+        image: "/lumen.png",
+    },
+    {
         name: "ThreatMonitor",
         desc: "Real-time web vulnerability scanner that checks for OWASP Top 10 issues.",
         tech: ["Node.js", "Express", "Cybersecurity", "React"],
