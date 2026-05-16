@@ -141,7 +141,7 @@ export default function Skills() {
                     {/* Right: Skills Progress Bars (5/12) */}
                     <div className="lg:col-span-1" /> {/* Spacer */}
                     <div className="lg:col-span-4 bg-[#F8F7F2] p-12 rounded-sm text-black">
-                        <h3 className="text-xl font-black mb-12 text-center uppercase tracking-[0.2em]">My Skills & Advantage</h3>
+                        <h3 className="text-xl font-black mb-12 text-center uppercase tracking-[0.2em]">Tech Stack</h3>
                         <div className="space-y-10">
                             {skills.map((skill, i) => (
                                 <div key={skill.name}>
