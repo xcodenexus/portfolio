@@ -42,6 +42,12 @@ export default function Hero() {
                         >
                             View Projects <span className="text-xl group-hover:translate-x-1 transition-transform">↗</span>
                         </motion.a>
+                        <motion.a
+                            href="/about"
+                            className="text-black font-black text-sm tracking-widest uppercase flex items-center gap-2 hover:text-accent transition-all group"
+                        >
+                            My Story <span className="text-xl group-hover:translate-x-1 transition-transform">↗</span>
+                        </motion.a>
                     </div>
 
                     <div className="flex items-center gap-8">
