@@ -16,7 +16,7 @@ export default function Hero() {
                     className="z-10"
                 >
                     <div className="flex items-center gap-2 mb-8 uppercase tracking-[0.2em] font-bold text-xs text-gray-500">
-                        <span className="text-accent text-lg">✱</span> Full-Stack Developer | Secure Web Apps
+                        <span className="text-accent text-lg">✱</span> Full-Stack Developer | Cybersecurity Focused
                     </div>
 
                     <h1 className="text-[4rem] md:text-[6.5rem] font-black leading-[1.1] mb-10 tracking-tight text-black">
@@ -24,8 +24,9 @@ export default function Hero() {
                         <span className="text-accent">Olakanla John</span>
                     </h1>
 
-                    <p className="text-sm md:text-base text-gray-500 max-w-2xl mb-14 leading-relaxed font-medium">
-                        I specialize in building modern web applications using React, Next.js, TypeScript, Tailwind CSS, HTML, CSS, JavaScript, and Python, enhanced with AI-assisted workflows and strong problem-solving skills. I also have cybersecurity education and assist non-technical people in understanding and using technology effectively. Based in Nigeria, available for remote work worldwide.
+                    <p className="text-base md:text-lg text-gray-500 max-w-2xl mb-14 leading-relaxed font-medium">
+                        I build modern web applications using React and Next.js.<br />
+                        I develop security tools and teach cybersecurity to non-technical people.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-10 mb-16">

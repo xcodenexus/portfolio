@@ -35,7 +35,7 @@ export default function AboutPage() {
     return (
         <>
             <Navbar />
-            <main>
+            <main className="cursor-default">
 
                 {/* Intro */}
                 <section className="relative min-h-[70vh] flex items-center pt-40 pb-24 px-6 lg:px-20 bg-[#F8F7F2] overflow-hidden">
