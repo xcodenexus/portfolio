@@ -45,6 +45,11 @@ const education = [
     },
 ];
 
+const stack = [
+    { label: "Environment", tools: ["Linux (Ubuntu)", "Kali Linux", "CLI", "Git"] },
+    { label: "Security", tools: ["Burp Suite", "nmap", "gobuster", "OSINT Tools"] },
+];
+
 export default function Skills() {
     return (
         <section id="skills" className="py-32 px-6 lg:px-20 bg-black text-white">
@@ -66,45 +71,71 @@ export default function Skills() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
 
-                    {/* Left: Experience & Education (7/12) */}
-                    <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-16">
-                        <div>
-                            <h3 className="text-2xl font-black mb-12 border-b border-gray-800 pb-6 uppercase tracking-widest">Work Experiences</h3>
-                            <div className="space-y-12">
-                                {experiences.map((exp, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: i * 0.1 }}
-                                    >
-                                        <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em] mb-3">{exp.year}</p>
-                                        <h4 className="text-xl font-black mb-1">{exp.role}</h4>
-                                        <p className="text-accent text-sm font-bold">- {exp.company}</p>
-                                    </motion.div>
-                                ))}
+                    {/* Left: Experience, Education & Stack (7/12) */}
+                    <div className="lg:col-span-7 flex flex-col gap-16">
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                            <div>
+                                <h3 className="text-2xl font-black mb-12 border-b border-gray-800 pb-6 uppercase tracking-widest">Work Experiences</h3>
+                                <div className="space-y-12">
+                                    {experiences.map((exp, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: i * 0.1 }}
+                                        >
+                                            <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em] mb-3">{exp.year}</p>
+                                            <h4 className="text-xl font-black mb-1">{exp.role}</h4>
+                                            <p className="text-accent text-sm font-bold">- {exp.company}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 className="text-2xl font-black mb-12 border-b border-gray-800 pb-6 uppercase tracking-widest">Education</h3>
+                                <div className="space-y-12">
+                                    {education.map((edu, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: i * 0.1 }}
+                                        >
+                                            <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em] mb-3">{edu.year}</p>
+                                            <h4 className="text-xl font-black mb-1">{edu.degree}</h4>
+                                            <p className="text-accent text-sm font-bold">- {edu.school}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
-                        <div>
-                            <h3 className="text-2xl font-black mb-12 border-b border-gray-800 pb-6 uppercase tracking-widest">Education</h3>
-                            <div className="space-y-12">
-                                {education.map((edu, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: i * 0.1 }}
-                                    >
-                                        <p className="text-gray-500 font-bold text-xs uppercase tracking-[0.2em] mb-3">{edu.year}</p>
-                                        <h4 className="text-xl font-black mb-1">{edu.degree}</h4>
-                                        <p className="text-accent text-sm font-bold">- {edu.school}</p>
-                                    </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h3 className="text-2xl font-black mb-12 border-b border-gray-800 pb-6 uppercase tracking-widest">My Stack</h3>
+                            <div className="space-y-8">
+                                {stack.map((category) => (
+                                    <div key={category.label}>
+                                        <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-4">{category.label}</p>
+                                        <div className="flex flex-wrap gap-3">
+                                            {category.tools.map((tool) => (
+                                                <span key={tool} className="text-[10px] font-bold uppercase tracking-widest px-4 py-2 border border-gray-800 text-gray-300 rounded-sm">
+                                                    {tool}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
+
                     </div>
 
                     {/* Right: Skills Progress Bars (5/12) */}
