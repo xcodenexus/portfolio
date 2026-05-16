@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -15,6 +16,8 @@ const navLinks = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
+    const prefix = pathname === "/" ? "" : "/";
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,7 +47,7 @@ export default function Navbar() {
                     {navLinks.map((link, i) => (
                         <motion.a
                             key={link.name}
-                            href={link.href}
+                            href={`${prefix}${link.href}`}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.05 }}
@@ -54,7 +57,7 @@ export default function Navbar() {
                         </motion.a>
                     ))}
                     <motion.a
-                        href="#contact"
+                        href={`${prefix}#contact`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         className="bg-accent text-white px-8 py-3.5 rounded-sm text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black transition-all shadow-lg shadow-accent/10"
@@ -81,7 +84,7 @@ export default function Navbar() {
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
-                            href={link.href}
+                            href={`${prefix}${link.href}`}
                             onClick={() => setIsOpen(false)}
                             className="text-sm font-black uppercase tracking-widest hover:text-accent transition-colors"
                         >
