@@ -13,6 +13,14 @@ const projects = [
         image: "/lumen.png",
     },
     {
+        name: "Olume",
+        desc: "A mindfulness dashboard for people who want to take their mental health as seriously as their fitness — without the hustle-culture noise.",
+        tech: ["Next.js", "TypeScript", "CSS", "JavaScript"],
+        github: "https://github.com/xcodenexus/Olume",
+        live: "#",
+        image: "/olume.png",
+    },
+    {
         name: "ThreatMonitor",
         desc: "Real-time web vulnerability scanner that checks for OWASP Top 10 issues.",
         tech: ["Node.js", "Express", "Cybersecurity", "React"],
