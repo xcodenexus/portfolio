@@ -10,6 +10,7 @@ const skills = [
     { name: "Node.js", level: 85, icon: Server },
     { name: "Python", level: 85, icon: Code },
     { name: "PostgreSQL", level: 80, icon: Database },
+    { name: "MongoDB", level: 80, icon: Database },
     { name: "Laravel", level: 75, icon: Layers },
     { name: "CI/CD", level: 80, icon: GitBranch },
 ];
