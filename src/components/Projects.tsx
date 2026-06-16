@@ -5,6 +5,14 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 
 const projects = [
     {
+        name: "Agape Comfort Care",
+        desc: "Rebuilt a home care and VA benefits service for U.S. veterans, migrating the site from Wix to a modern React build with a Sanity-powered blog and Cloudflare bot protection.",
+        tech: ["React", "Sanity", "Cloudflare"],
+        github: "#",
+        live: "https://www.agapecomfort.com/",
+        image: "/agape.png",
+    },
+    {
         name: "Lumen",
         desc: "A polished frontend for a fictional AI product called Lumen, a workspace for building and running custom AI agents.",
         tech: ["Next.js", "TypeScript", "Tailwind CSS"],
