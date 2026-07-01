@@ -28,7 +28,7 @@ const socials = [
     { Icon: Mail, href: "mailto:xcodenexus@gmail.com", label: "xcodenexus@gmail.com" },
     { Icon: Twitter, href: "https://x.com/xcodenexus", label: "@xcodenexus" },
     { Icon: Github, href: "https://github.com/xcodenexus", label: "github.com/xcodenexus" },
-    { Icon: Linkedin, href: "https://www.linkedin.com/in/olakanlajohn/", label: "Olakanla John" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/in/olakanlajohn/", label: "Olakanla Olayide" },
 ];
 
 export default function AboutPage() {

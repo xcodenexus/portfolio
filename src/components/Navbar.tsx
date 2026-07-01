@@ -39,7 +39,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     className="text-3xl font-black tracking-tighter cursor-pointer"
                 >
-                    <span>J</span><span className="text-accent">ohn.</span>
+                    <span>Ola</span><span className="text-accent">yide.</span>
                 </motion.div>
 
                 {/* Desktop Nav */}

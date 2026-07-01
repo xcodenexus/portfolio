@@ -16,17 +16,16 @@ export default function Hero() {
                     className="z-10"
                 >
                     <div className="flex items-center gap-2 mb-8 uppercase tracking-[0.2em] font-bold text-xs text-gray-500">
-                        <span className="text-accent text-lg">✱</span> Full-Stack Developer | Cybersecurity Focused
+                        <span className="text-accent text-lg">✱</span> Full-Stack Developer | Instructor
                     </div>
 
                     <h1 className="text-[4rem] md:text-[6.5rem] font-black leading-[1.1] mb-10 tracking-tight text-black">
                         Hello! I'm <br />
-                        <span className="text-accent">Olakanla John</span>
+                        <span className="text-accent">Olakanla <span className="text-black">Ola</span>yide</span>
                     </h1>
 
                     <p className="text-base md:text-lg text-gray-500 max-w-2xl mb-14 leading-relaxed font-medium">
-                        I build modern web applications using React and Next.js.<br />
-                        I develop security tools and teach cybersecurity to non-technical people.
+                        I build modern, secure websites and web applications using React and Next.js. I also teach web development and technical skills to people getting started in tech, bringing a security-first approach to every project I ship.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-10 mb-16">
@@ -97,7 +96,7 @@ export default function Hero() {
                     <div className="relative w-full max-w-[480px] aspect-[4/5] z-10">
                         <img
                             src="/pic.PNG"
-                            alt="Olakanla John"
+                            alt="Olakanla Olayide"
                             className="w-full h-full object-cover rounded-3xl drop-shadow-2xl"
                         />
                     </div>
@@ -107,7 +106,7 @@ export default function Hero() {
 
             {/* Background Section Text */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35rem] font-black text-black/[0.015] select-none pointer-events-none uppercase tracking-tighter">
-                John
+                Olayide
             </div>
         </section>
     );

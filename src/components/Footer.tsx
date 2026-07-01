@@ -10,11 +10,11 @@ export default function Footer() {
 
                 {/* Logo Style: Harris (H black, arris orange) */}
                 <div className="text-3xl font-black tracking-tighter">
-                    <span>J</span><span className="text-accent">ohn.</span>
+                    <span>Ola</span><span className="text-accent">yide.</span>
                 </div>
 
                 <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.2em] text-center md:text-left">
-                    © {new Date().getFullYear()} Olakanla John. All rights reserved. <br className="md:hidden" />
+                    © {new Date().getFullYear()} Olakanla Olayide. All rights reserved. <br className="md:hidden" />
                     <span className="hidden md:inline"> | </span>
                     Built with Next.js & Framer Motion.
                 </p>
