@@ -33,8 +33,11 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
 
-        {/* Smartsupp Live Chat */}
-        <Script id="smartsupp" strategy="afterInteractive">
+        {/* Smartsupp Live Chat.
+            NOTE: the id must not be "smartsupp" — an element id becomes a window
+            property, so window.smartsupp would resolve to this script element and
+            the snippet's own window.smartsupp guard would skip loading the chat. */}
+        <Script id="smartsupp-live-chat" strategy="afterInteractive">
           {`var _smartsupp = _smartsupp || {};
 _smartsupp.key = '${SMARTSUPP_KEY}';
 window.smartsupp||(function(d) {
