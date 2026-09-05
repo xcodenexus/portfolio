@@ -64,7 +64,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-black text-gray-400 border-b border-gray-100 pb-2 uppercase tracking-[0.2em] mb-3">Location</p>
-                                    <p className="text-2xl font-black tracking-tight">Ogbomoso, Nigeria</p>
+                                    <p className="text-2xl font-black tracking-tight">Nigeria</p>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                                     disabled={status === "loading"}
                                     whileHover={status !== "loading" ? { backgroundColor: "#000000" } : {}}
                                     transition={{ duration: 0.3 }}
-                                    className="w-full bg-accent text-white py-5 rounded-sm font-black uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 shadow-xl shadow-accent/20 disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="w-full bg-accent text-white py-5 rounded-full font-black uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 shadow-xl shadow-accent/20 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {status === "loading" ? "Sending..." : (<>Send Message <Send size={16} /></>)}
                                 </motion.button>

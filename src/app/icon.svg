@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Dark rounded background -->
+  <!-- XCODE NEXUS mark: interlocking diamonds on the brand dark square -->
   <rect width="32" height="32" rx="7" fill="#111111"/>
-  <!-- Same 4-rect asterisk used in Hero.tsx, scaled to 32×32 -->
-  <g transform="translate(16,16)">
-    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00"/>
-    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(45)"/>
-    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(90)"/>
-    <rect x="-1.5" y="-12" width="3" height="24" rx="1.5" fill="#FF5C00" transform="rotate(135)"/>
+  <defs>
+    <linearGradient id="xcn" x1="4" y1="8" x2="28" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FF5C00"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#xcn)" stroke-width="3.2" stroke-linejoin="round">
+    <rect x="6.2" y="10.2" width="11.6" height="11.6" rx="2.2" transform="rotate(45 12 16)"/>
+    <rect x="14.2" y="10.2" width="11.6" height="11.6" rx="2.2" transform="rotate(45 20 16)"/>
   </g>
 </svg>

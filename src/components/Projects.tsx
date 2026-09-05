@@ -13,6 +13,46 @@ const projects = [
         image: "/agape.png",
     },
     {
+        name: "Pearl Restaurant",
+        desc: "Fine-dining site for an oceanfront restaurant in Eko Atlantic, Lagos — signature menu, experience story and a reservation flow wrapped in a dark, editorial layout.",
+        tech: ["React", "Vite", "Tailwind CSS"],
+        github: "#",
+        live: "https://pearl-resturant.lovable.app/",
+        image: "/pearl-lovable.png",
+    },
+    {
+        name: "Dwellora",
+        desc: "Real estate marketplace for finding homes and investment properties — buy/rent search, curated listings, agent profiles and a list-your-property flow.",
+        tech: ["React", "TypeScript", "Tailwind CSS"],
+        github: "#",
+        live: "https://panel-rush-93809697.figma.site/",
+        image: "/dwellora.png",
+    },
+    {
+        name: "SoleMate",
+        desc: "Premium footwear storefront — category browsing, featured drops, cart and checkout, customer reviews and newsletter capture in a neon dark-mode UI.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "E-Commerce"],
+        github: "#",
+        live: "https://solessale.netlify.app/",
+        image: "/sole.png",
+    },
+    {
+        name: "Xremova",
+        desc: "One-click background remover — drop in an image and get a clean, high-resolution cutout in seconds. Fully automatic, no signup, no editing skills needed.",
+        tech: ["React", "TypeScript", "Image Processing"],
+        github: "#",
+        live: "https://x-remova.netlify.app/",
+        image: "/xremova.png",
+    },
+    {
+        name: "Pearl Restaurant II",
+        desc: "A second take on the Pearl brand — cinematic full-bleed hero, scroll-driven storytelling and the same reservation flow rebuilt with a more editorial rhythm.",
+        tech: ["React", "Tailwind CSS", "Motion Design"],
+        github: "#",
+        live: "https://pearlrest.netlify.app/",
+        image: "/pearl.png",
+    },
+    {
         name: "Lumen",
         desc: "A polished frontend for a fictional AI product called Lumen, a workspace for building and running custom AI agents.",
         tech: ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -85,12 +125,16 @@ export default function Projects() {
                             <div className="aspect-video overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-700">
                                 <img src={project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                    <a href={project.github} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-accent hover:text-white transition-all">
-                                        <Github size={20} />
-                                    </a>
-                                    <a href={project.live} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-accent hover:text-white transition-all">
-                                        <ExternalLink size={20} />
-                                    </a>
+                                    {project.github !== "#" && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} on GitHub`} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-accent hover:text-white transition-all">
+                                            <Github size={20} />
+                                        </a>
+                                    )}
+                                    {project.live !== "#" && (
+                                        <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name}`} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-accent hover:text-white transition-all">
+                                            <ExternalLink size={20} />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
@@ -109,13 +153,43 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <a href={project.live} className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] group-hover:gap-5 transition-all">
-                                    View Project <ArrowRight size={16} className="text-accent" />
-                                </a>
+                                {project.live !== "#" ? (
+                                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] group-hover:gap-5 transition-all">
+                                        View Project <ArrowRight size={16} className="text-accent" />
+                                    </a>
+                                ) : project.github !== "#" ? (
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] group-hover:gap-5 transition-all">
+                                        View Code <ArrowRight size={16} className="text-accent" />
+                                    </a>
+                                ) : (
+                                    <span className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-gray-300">
+                                        Private Build
+                                    </span>
+                                )}
                             </div>
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Work that can't be shown publicly */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mt-16 border border-dashed border-gray-300 rounded-sm py-10 px-8 md:px-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 text-center md:text-left"
+                >
+                    <span className="text-accent text-lg leading-none">✱</span>
+                    <p className="text-gray-500 font-medium leading-relaxed max-w-2xl">
+                        This is selected work only. Several client projects are covered by NDAs and can&apos;t be
+                        listed publicly, so what you see here is a slice of the whole.
+                    </p>
+                    <a
+                        href="#contact"
+                        className="shrink-0 text-[10px] font-black uppercase tracking-[0.2em] text-black hover:text-accent transition-colors inline-flex items-center gap-2"
+                    >
+                        Ask Me About Them <ArrowRight size={14} className="text-accent" />
+                    </a>
+                </motion.div>
             </div>
         </section>
     );

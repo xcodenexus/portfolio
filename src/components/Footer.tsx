@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
+import Logo from "./Logo";
 
 export default function Footer() {
     return (
         <footer className="py-20 px-6 lg:px-20 border-t border-gray-100 bg-[#F8F7F2]">
             <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
 
-                {/* Logo Style: Harris (H black, arris orange) */}
-                <div className="text-3xl font-black tracking-tighter">
-                    <span>Ola</span><span className="text-accent">yide.</span>
-                </div>
+                {/* Brand lockup */}
+                <Logo />
 
                 <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.2em] text-center md:text-left">
                     © {new Date().getFullYear()} Olakanla Olayide. All rights reserved. <br className="md:hidden" />
@@ -24,6 +24,7 @@ export default function Footer() {
                         { Icon: Github, href: "https://github.com/xcodenexus" },
                         { Icon: Linkedin, href: "https://www.linkedin.com/in/olakanlajohn/" },
                         { Icon: Twitter, href: "https://x.com/xcodenexus" },
+                        { Icon: WhatsAppIcon, href: "https://wa.me/2349033211222" },
                     ].map(({ Icon, href }) => (
                         <motion.a
                             key={href}

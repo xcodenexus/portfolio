@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Hero() {
     return (
@@ -32,9 +33,9 @@ export default function Hero() {
                         <motion.a
                             href="#contact"
                             whileHover={{ backgroundColor: "#000000" }}
-                            className="bg-accent text-white px-10 py-5 rounded-sm font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-accent/20"
+                            className="bg-accent text-white px-10 py-5 rounded-full font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-accent/20"
                         >
-                            Let's Talk ↗
+                            Hire Me ↗
                         </motion.a>
                         <motion.a
                             href="#projects"
@@ -52,12 +53,13 @@ export default function Hero() {
 
                     <div className="flex items-center gap-8">
                         <div className="flex items-center gap-4">
-                            <span className="text-xs font-bold uppercase tracking-widest text-black border-r border-gray-300 pr-8">Check Out My</span>
+                            <span className="text-xs font-bold uppercase tracking-widest text-black border-r border-gray-300 pr-8">Socials</span>
                             <div className="flex gap-4">
                                 {[
                                     { Icon: Github, href: "https://github.com/xcodenexus" },
                                     { Icon: Linkedin, href: "https://www.linkedin.com/in/olakanlajohn/" },
                                     { Icon: Twitter, href: "https://x.com/xcodenexus" },
+                                    { Icon: WhatsAppIcon, href: "https://wa.me/2349033211222" },
                                 ].map(({ Icon, href }) => (
                                     <motion.a
                                         key={href}

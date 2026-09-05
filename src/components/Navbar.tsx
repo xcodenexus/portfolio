@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 const navLinks = [
     { name: "Home", href: "#home" },
@@ -33,14 +34,15 @@ export default function Navbar() {
                 }`}
         >
             <div className="max-w-[1400px] mx-auto flex justify-between items-center">
-                {/* Logo Style: Harris (H black, arris orange) */}
-                <motion.div
+                {/* Brand lockup */}
+                <motion.a
+                    href={`${prefix}#home`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="text-3xl font-black tracking-tighter cursor-pointer"
+                    aria-label="XCODE NEXUS — home"
                 >
-                    <span>Ola</span><span className="text-accent">yide.</span>
-                </motion.div>
+                    <Logo />
+                </motion.a>
 
                 {/* Desktop Nav */}
                 <div className="hidden lg:flex gap-12 items-center">
@@ -60,9 +62,9 @@ export default function Navbar() {
                         href={`${prefix}#contact`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="bg-accent text-white px-8 py-3.5 rounded-sm text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black transition-all shadow-lg shadow-accent/10"
+                        className="bg-accent text-white px-8 py-3.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black transition-all shadow-lg shadow-accent/10"
                     >
-                        Let's Talk
+                        Hire Me
                     </motion.a>
                 </div>
 

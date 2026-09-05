@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -27,6 +28,7 @@ const focusAreas = [
 const socials = [
     { Icon: Mail, href: "mailto:xcodenexus@gmail.com", label: "xcodenexus@gmail.com" },
     { Icon: Twitter, href: "https://x.com/xcodenexus", label: "@xcodenexus" },
+    { Icon: WhatsAppIcon, href: "https://wa.me/2349033211222", label: "+234 903 321 1222" },
     { Icon: Github, href: "https://github.com/xcodenexus", label: "github.com/xcodenexus" },
     { Icon: Linkedin, href: "https://www.linkedin.com/in/olakanlajohn/", label: "Olakanla Olayide" },
 ];
