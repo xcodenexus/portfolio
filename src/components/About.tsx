@@ -26,7 +26,7 @@ const services = [
     },
     {
         title: "Fast Delivery",
-        projects: "Live In Days, Not Months",
+        projects: "Live In Weeks, Not Months",
         image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=200&q=80",
     },
     {
