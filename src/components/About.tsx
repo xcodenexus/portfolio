@@ -6,7 +6,7 @@ import { Search, ArrowUpRight } from "lucide-react";
 const services = [
     {
         title: "Web Development",
-        projects: "20+ Projects Done",
+        projects: "30+ Projects Done",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80",
     },
     {
@@ -17,7 +17,22 @@ const services = [
     {
         title: "Cybersecurity",
         projects: "Secure Coding Expert",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=200&q=80",
+        image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=200&q=80",
+    },
+    {
+        title: "SEO",
+        projects: "Built To Rank",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=200&q=80",
+    },
+    {
+        title: "Fast Delivery",
+        projects: "Live In Days, Not Months",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=200&q=80",
+    },
+    {
+        title: "Ongoing Support",
+        projects: "Post-Launch Care",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=200&q=80",
     }
 ];
 
@@ -44,7 +59,7 @@ export default function About() {
 
                         <div className="grid grid-cols-2 gap-12 mb-12">
                             <div>
-                                <p className="text-4xl font-black text-black mb-2 tracking-tighter">20+</p>
+                                <p className="text-4xl font-black text-black mb-2 tracking-tighter">30+</p>
                                 <p className="text-xs font-bold text-gray-400 uppercase tracking-widest leading-loose">Projects <br /> Completed</p>
                             </div>
                             <div>
@@ -77,18 +92,18 @@ export default function About() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-white p-6 rounded-sm border border-gray-100 flex items-center justify-between group hover:shadow-xl hover:shadow-black/5 transition-all cursor-pointer"
+                                className="bg-white p-5 rounded-sm border border-gray-100 flex items-center justify-between gap-4 group hover:shadow-xl hover:shadow-black/5 transition-all cursor-pointer"
                             >
-                                <div className="flex items-center gap-8">
-                                    <div className="w-24 h-24 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500">
+                                <div className="flex items-center gap-5 sm:gap-6 min-w-0">
+                                    <div className="w-20 h-20 shrink-0 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500">
                                         <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-black text-black mb-1 tracking-tight">{service.title}</h3>
-                                        <p className="text-gray-400 text-sm font-bold uppercase tracking-widest">{service.projects}</p>
+                                        <h3 className="text-xl sm:text-2xl font-black text-black mb-1 tracking-tight">{service.title}</h3>
+                                        <p className="text-gray-400 text-[11px] sm:text-sm font-bold uppercase tracking-widest">{service.projects}</p>
                                     </div>
                                 </div>
-                                <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all">
+                                <div className="w-12 h-12 shrink-0 rounded-full border border-gray-100 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all">
                                     <ArrowUpRight size={20} />
                                 </div>
                             </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Hero() {
@@ -33,21 +33,21 @@ export default function Hero() {
                         <motion.a
                             href="#contact"
                             whileHover={{ backgroundColor: "#000000" }}
-                            className="bg-accent text-white px-10 py-5 rounded-full font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-accent/20"
+                            className="bg-accent text-white px-10 py-5 rounded-full font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-accent/20 inline-flex items-center gap-2"
                         >
-                            Hire Me ↗
+                            Hire Me <ArrowUpRight size={18} strokeWidth={3} />
                         </motion.a>
                         <motion.a
                             href="#projects"
                             className="text-black font-black text-sm tracking-widest uppercase flex items-center gap-2 hover:text-accent transition-all group"
                         >
-                            View Projects <span className="text-xl group-hover:translate-x-1 transition-transform">↗</span>
+                            View Projects <ArrowUpRight size={18} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
                         </motion.a>
                         <motion.a
                             href="/about"
                             className="text-black font-black text-sm tracking-widest uppercase flex items-center gap-2 hover:text-accent transition-all group"
                         >
-                            My Story <span className="text-xl group-hover:translate-x-1 transition-transform">↗</span>
+                            My Story <ArrowUpRight size={18} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
                         </motion.a>
                     </div>
 

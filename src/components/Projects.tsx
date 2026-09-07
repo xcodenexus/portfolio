@@ -2,8 +2,25 @@
 
 import { motion } from "framer-motion";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
+import { LogoMark } from "./Logo";
 
 const projects = [
+    {
+        name: "Apex Roofing Co.",
+        desc: "Roofing, repairs and restoration for a Greater Manchester and Cheshire contractor — full-bleed hero, service breakdown, project gallery, reviews, FAQs and a free-quote flow.",
+        tech: ["React", "TypeScript", "Tailwind CSS"],
+        github: "#",
+        live: "https://apex-roofing-co-webs-8y8m.bolt.host/",
+        image: "/apex.png",
+    },
+    {
+        name: "Northline Plumbing",
+        desc: "Residential plumbing and heating specialist in Greater Manchester — 24/7 emergency callouts, boiler and bathroom services, testimonials and a tell–diagnose–fix booking journey.",
+        tech: ["React", "TypeScript", "Tailwind CSS"],
+        github: "#",
+        live: "https://northline-plumb-pro.lovable.app/",
+        image: "/northline.png",
+    },
     {
         name: "Agape Comfort Care",
         desc: "Rebuilt a home care and VA benefits service for U.S. veterans, migrating the site from Wix to a modern React build with a Sanity-powered blog and Cloudflare bot protection.",
@@ -169,6 +186,58 @@ export default function Projects() {
                             </div>
                         </motion.div>
                     ))}
+
+                    {/* Fills the trailing gap so the grid always ends on a complete line */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="lg:col-span-2 relative overflow-hidden rounded-sm bg-black text-white group"
+                    >
+                        {/* Dot-grid texture */}
+                        <div
+                            aria-hidden
+                            className="absolute inset-0 opacity-[0.18]"
+                            style={{
+                                backgroundImage: "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
+                                backgroundSize: "22px 22px",
+                            }}
+                        />
+
+                        <div className="relative flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-14 p-10 lg:p-14 h-full">
+                            {/* The XCODE NEXUS mark, same one used in the navbar and favicon */}
+                            <motion.div
+                                className="shrink-0 mx-auto lg:mx-0"
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                                <LogoMark className="w-44 lg:w-64 h-auto drop-shadow-[0_0_45px_rgba(255,92,0,0.35)] group-hover:scale-105 transition-transform duration-700" />
+                            </motion.div>
+
+                            <div className="text-center lg:text-left">
+                                <div className="flex items-center justify-center lg:justify-start gap-2 mb-5 uppercase tracking-[0.2em] font-bold text-xs text-accent">
+                                    <span className="text-lg">✱</span> Open Slot
+                                </div>
+
+                                <h3 className="text-3xl md:text-4xl font-black tracking-tight leading-[1.1] mb-5">
+                                    Your Project <br className="hidden lg:block" /> Could Be Next
+                                </h3>
+
+                                <p className="text-gray-400 leading-relaxed font-medium mb-8 max-w-md mx-auto lg:mx-0">
+                                    There is room on this grid for what you are building. Tell me the idea and I will
+                                    tell you exactly how I would ship it — scope, stack and timeline.
+                                </p>
+
+                                <a
+                                    href="#contact"
+                                    className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-white hover:gap-5 transition-all"
+                                >
+                                    Start A Project <ArrowRight size={16} className="text-accent" />
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
 
                 {/* Work that can't be shown publicly */}
