@@ -1,0 +1,132 @@
+/*
+ * Styles shared by /aisidehustleplaybook, /how-to-write-better-prompts and /ai.
+ * Everything is prefixed "pb-" so nothing leaks into the rest of the site.
+ */
+
+.pb-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(900px 420px at 88% -8%, rgba(255, 255, 255, 0.3), transparent 62%),
+        radial-gradient(640px 380px at 100% 100%, #d9540b, transparent 65%),
+        #f26a1b;
+}
+
+/* Faint grid that fades out toward the text side. */
+.pb-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 80% 40%, #000 10%, transparent 68%);
+    mask-image: radial-gradient(ellipse at 80% 40%, #000 10%, transparent 68%);
+}
+
+.pb-slant {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), 0 100%);
+    padding-bottom: 4.5rem;
+}
+
+.pb-dark {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(700px 320px at 10% 0%, rgba(242, 106, 27, 0.28), transparent 65%),
+        #1a1a1f;
+}
+
+.pb-glow {
+    background:
+        radial-gradient(520px 260px at 50% 0%, rgba(242, 106, 27, 0.35), transparent 70%),
+        #1a1a1f;
+}
+
+.pb-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pb-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(217, 84, 11, 0.16);
+}
+
+.pb-cover {
+    transform: rotate(-4deg);
+    box-shadow:
+        0 0 0 6px rgba(255, 255, 255, 0.9),
+        0 30px 60px rgba(26, 26, 31, 0.35);
+}
+
+.pb-letter {
+    position: absolute;
+    right: 0.75rem;
+    top: -0.5rem;
+    font-size: 6.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #f26a1b;
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+}
+
+.pb-marquee {
+    display: flex;
+    width: max-content;
+    animation: pb-scroll 28s linear infinite;
+}
+
+@keyframes pb-float {
+    0%,
+    100% {
+        transform: rotate(-4deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-2deg) translateY(-10px);
+    }
+}
+
+@keyframes pb-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes pb-rise {
+    from {
+        opacity: 0;
+        transform: translateY(26px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .pb-cover {
+        animation: pb-float 6s ease-in-out infinite;
+    }
+
+    /* Scroll-reveal where the browser supports it; elsewhere content just shows. */
+    @supports (animation-timeline: view()) {
+        .pb-reveal {
+            animation: pb-rise linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 40%;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pb-marquee {
+        animation: none;
+    }
+    .pb-card {
+        transition: none;
+    }
+}
