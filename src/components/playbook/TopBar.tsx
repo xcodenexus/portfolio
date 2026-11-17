@@ -1,4 +1,4 @@
-import { AI_GUIDE_URL, PLAYBOOK_URL, PROMPT_LESSON_URL } from "@/lib/playbook-config";
+import { AI_GUIDE_URL, PLAYBOOK_URL, PORTFOLIO_URL, PROMPT_LESSON_URL } from "@/lib/playbook-config";
 
 const LINKS = [
     { label: "AI guide", href: AI_GUIDE_URL },
@@ -12,7 +12,7 @@ export default function TopBar({ label }: { label: string }) {
     return (
         <header className="bg-[#1A1A1F] text-white">
             <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-5">
-                <a href="https://xcodenexus.com" className={`shrink-0 text-xs font-extrabold tracking-[0.08em] sm:text-sm sm:tracking-[0.12em] ${FOCUS}`}>
+                <a href={PORTFOLIO_URL} className={`shrink-0 text-xs font-extrabold tracking-[0.08em] sm:text-sm sm:tracking-[0.12em] ${FOCUS}`}>
                     XCODENEXUS
                 </a>
                 <nav aria-label={label}>

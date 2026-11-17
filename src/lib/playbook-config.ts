@@ -10,7 +10,8 @@ export const PRICE_AMOUNT = "8500";
 export const PRICE_CURRENCY = "NGN";
 
 export const WHATSAPP_URL = "https://wa.me/2349033211222";
-export const PORTFOLIO_URL = "https://xcodenexus.com";
+/** Canonical host. The apex domain (xcodenexus.com) redirects here, so use www everywhere. */
+export const PORTFOLIO_URL = "https://www.xcodenexus.com";
 
 export const PLAYBOOK_URL = "/aisidehustleplaybook";
 export const PROMPT_LESSON_URL = "/how-to-write-better-prompts";
