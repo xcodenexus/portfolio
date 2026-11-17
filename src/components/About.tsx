@@ -38,7 +38,8 @@ export default function About() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
 
                     {/* Left Column (5/12) */}
-                    <div className="lg:col-span-5">
+                    {/* Follows the scroll beside the tall cards, but only where the screen is tall enough to show it all. */}
+                    <div className="lg:col-span-5 [@media(min-width:1024px)_and_(min-height:900px)]:sticky [@media(min-width:1024px)_and_(min-height:900px)]:top-32 [@media(min-width:1024px)_and_(min-height:900px)]:self-start">
                         <div className="flex items-center gap-2 mb-8 uppercase tracking-[0.2em] font-bold text-xs text-gray-500">
                             <span className="text-accent text-lg">✱</span> What I Can Do
                         </div>
@@ -70,6 +71,13 @@ export default function About() {
                                 </li>
                             ))}
                         </ul>
+
+                        <a
+                            href="#contact"
+                            className="mt-12 inline-flex items-center gap-2 bg-accent text-white px-10 py-5 rounded-full font-black text-sm tracking-widest uppercase hover:bg-black transition-all shadow-xl shadow-accent/20"
+                        >
+                            Start A Project <ArrowUpRight size={18} strokeWidth={3} />
+                        </a>
                     </div>
 
                     {/* Right Column: the three offers */}

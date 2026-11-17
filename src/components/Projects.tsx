@@ -16,7 +16,7 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={REVEAL_VIEWPORT}
             transition={{ delay: (idx % 3) * 0.1 }}
-            className="bg-white rounded-sm overflow-hidden border border-gray-100 group hover:shadow-2xl hover:shadow-black/5 transition-all duration-500"
+            className="bg-white rounded-sm overflow-hidden border border-gray-100 group hover:shadow-2xl hover:shadow-black/5 transition-all duration-500 flex flex-col"
         >
             {/* Fixed aspect ratio + lazy loading: no layout shift, and below-the-fold images wait until needed */}
             <div className="aspect-video overflow-hidden relative">
@@ -41,12 +41,12 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
                 </div>
             </div>
 
-            <div className="p-10">
+            <div className="p-10 flex flex-col flex-1">
                 <h3 className="text-2xl font-black text-black mb-4 tracking-tight group-hover:text-accent transition-colors">
                     {project.name}
                 </h3>
 
-                <p className="text-gray-500 mb-8 line-clamp-2 leading-relaxed font-medium">{project.desc}</p>
+                <p className="text-gray-500 mb-8 leading-relaxed font-medium">{project.desc}</p>
 
                 {/* Optional outcome line. Only rendered when a result is filled in. */}
                 {project.result && project.result.trim() !== "" && (
@@ -55,7 +55,7 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
                     </p>
                 )}
 
-                <div className="flex flex-wrap gap-3 mb-10">
+                <div className="flex flex-wrap gap-3 mb-10 mt-auto">
                     {project.tech.map((t) => (
                         <span key={t} className="text-[10px] font-bold uppercase tracking-widest px-4 py-1 bg-[#F8F7F2] text-gray-400 rounded-sm">
                             {t}
@@ -97,7 +97,7 @@ export default function Projects() {
                         </h2>
                     </div>
                     <p className="max-w-md text-gray-500 text-lg leading-relaxed font-medium lg:mb-1">
-                        A selection of my best work in web development, AI integration, and cybersecurity. Each project is built with performance and security in mind.
+                        Websites and web apps built for real businesses. Each project is built with performance and security in mind.
                     </p>
                 </div>
 
