@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { LEARN_LINKS } from "@/lib/learn-links";
+import { REVEAL_VIEWPORT } from "@/lib/motion";
 
 export default function AIResources() {
     return (
@@ -25,9 +26,9 @@ export default function AIResources() {
                     {LEARN_LINKS.map((item, idx) => (
                         <motion.div
                             key={item.href}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0.35, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={REVEAL_VIEWPORT}
                             transition={{ delay: idx * 0.1 }}
                             className="relative flex flex-col bg-[#F8F7F2] border border-gray-100 rounded-sm p-8 hover:border-accent/40 hover:shadow-lg hover:shadow-black/5 transition-all duration-500 group has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent"
                         >

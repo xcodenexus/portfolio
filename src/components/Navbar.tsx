@@ -40,7 +40,7 @@ export default function Navbar() {
                 {/* Brand lockup */}
                 <motion.a
                     href={`${prefix}#home`}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0.35, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     aria-label="XCODE NEXUS — home"
                 >
@@ -53,7 +53,7 @@ export default function Navbar() {
                         <motion.a
                             key={link.name}
                             href={resolveHref(link.href)}
-                            initial={{ opacity: 0, y: -10 }}
+                            initial={{ opacity: 0.35, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.05 }}
                             className="text-[10px] font-black hover:text-accent transition-colors uppercase tracking-[0.2em] text-gray-500"
@@ -63,7 +63,7 @@ export default function Navbar() {
                     ))}
                     <motion.a
                         href={`${prefix}#contact`}
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0.35, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         className="bg-accent text-white px-8 py-3.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black transition-all shadow-lg shadow-accent/10"
                     >

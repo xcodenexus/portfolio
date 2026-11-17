@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { REVEAL_VIEWPORT } from "@/lib/motion";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -34,7 +35,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="py-32 px-6 lg:px-20 bg-white">
+        <section id="contact" className="py-32 px-6 lg:px-20 bg-white overflow-x-clip">
             <div className="max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
 
@@ -53,9 +54,9 @@ export default function Contact() {
                                 <div className="w-16 h-16 rounded-full bg-[#F8F7F2] flex items-center justify-center text-accent">
                                     <Mail size={24} />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="text-[10px] font-black text-gray-400 border-b border-gray-100 pb-2 uppercase tracking-[0.2em] mb-3">Email Me</p>
-                                    <p className="text-2xl font-black tracking-tight">xcodenexus@gmail.com</p>
+                                    <p className="text-2xl font-black tracking-tight break-words">xcodenexus@gmail.com</p>
                                 </div>
                             </div>
                             <div className="flex gap-8 items-center">
@@ -72,9 +73,9 @@ export default function Contact() {
 
                     {/* Right: Contact Form */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0.35, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={REVEAL_VIEWPORT}
                         className="bg-[#F8F7F2] p-12 rounded-sm"
                     >
                         {status === "success" ? (
