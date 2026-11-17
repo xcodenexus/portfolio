@@ -11,6 +11,7 @@ const navLinks = [
     { name: "Services", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "AI Guide", href: "/ai" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -19,6 +20,8 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
     const prefix = pathname === "/" ? "" : "/";
+    // In-page anchors need the prefix; real routes like /ai are already absolute.
+    const resolveHref = (href: string) => (href.startsWith("/") ? href : `${prefix}${href}`);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,7 +52,7 @@ export default function Navbar() {
                     {navLinks.map((link, i) => (
                         <motion.a
                             key={link.name}
-                            href={`${prefix}${link.href}`}
+                            href={resolveHref(link.href)}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.05 }}
@@ -86,7 +89,7 @@ export default function Navbar() {
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
-                            href={`${prefix}${link.href}`}
+                            href={resolveHref(link.href)}
                             onClick={() => setIsOpen(false)}
                             className="text-sm font-black uppercase tracking-widest hover:text-accent transition-colors"
                         >

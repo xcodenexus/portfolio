@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { LEARN_LINKS } from "@/lib/learn-links";
 import WhatsAppIcon from "./WhatsAppIcon";
 import Logo from "./Logo";
 
@@ -39,6 +41,25 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
+
+            <nav
+                aria-label="Learn"
+                className="max-w-[1400px] mx-auto mt-14 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center gap-6 md:gap-12"
+            >
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Learn</p>
+                <ul className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+                    {LEARN_LINKS.map((item) => (
+                        <li key={item.href}>
+                            <Link
+                                href={item.href}
+                                className="text-[10px] font-black uppercase tracking-[0.2em] text-black hover:text-accent transition-colors"
+                            >
+                                {item.footerLabel}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
         </footer>
     );
 }
