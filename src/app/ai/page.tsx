@@ -1,4 +1,6 @@
 import PageShell from "@/components/playbook/PageShell";
+import { ClosingBlock, HeroCtas } from "@/components/ai/AuthorCtas";
+import StickyContactBar, { AI_HERO_ID } from "@/components/ai/StickyContactBar";
 import Faq, { faqJsonLd } from "@/components/playbook/Faq";
 import {
     AuthorExample,
@@ -7,6 +9,7 @@ import {
     GoodAndBad,
     Myths,
     NextFewYears,
+    SellPdfOffer,
     StartToday,
     TableOfContents,
     WhatAiIs,
@@ -46,8 +49,8 @@ const updatedLabel = new Date(LAST_UPDATED).toLocaleDateString("en-GB", {
 
 export default function AiGuidePage() {
     return (
-        <PageShell label="AI guide" jsonLd={jsonLd}>
-            <header className="pb-hero pb-slant px-5 pt-14 text-white md:pt-20">
+        <PageShell label="AI guide" hasStickyBar showAuthorCtas jsonLd={jsonLd}>
+            <header id={AI_HERO_ID} className="pb-hero pb-slant px-5 pt-14 text-white md:pt-20">
                 <div className="mx-auto max-w-5xl">
                     <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#1A1A1F]">
                         The beginner&apos;s guide
@@ -58,6 +61,7 @@ export default function AiGuidePage() {
                     <p className="mt-5 max-w-xl text-lg font-medium text-[#1A1A1F] md:text-2xl">
                         {GUIDE_SUBHEAD}
                     </p>
+                    <HeroCtas />
                 </div>
             </header>
 
@@ -82,15 +86,18 @@ export default function AiGuidePage() {
                         <WhyNigeria />
                         <StartToday />
                         <FullPlan />
+                        <SellPdfOffer />
                         <section id="faq" className="py-12 md:py-14">
                             <h2 className="scroll-mt-6 mb-6 text-3xl font-extrabold tracking-tight md:text-4xl">
                                 Questions
                             </h2>
                             <Faq items={AI_FAQS} />
                         </section>
+                        <ClosingBlock />
                     </article>
                 </div>
             </div>
+            <StickyContactBar />
         </PageShell>
     );
 }

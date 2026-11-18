@@ -1,6 +1,13 @@
-import { AI_GUIDE_URL, PLAYBOOK_URL, PROMPT_LESSON_URL } from "@/lib/playbook-config";
+import {
+    AI_GUIDE_URL,
+    PLAYBOOK_URL,
+    PROMPT_LESSON_URL,
+    SELL_PDF_PAGES,
+    SELL_PDF_PRICE_LABEL,
+    SELL_PDF_URL,
+} from "@/lib/playbook-config";
 
-/** The three free-resource links shown in the homepage section and the footer. */
+/** The resource and ebook links shown in the homepage section and the footer. */
 export const LEARN_LINKS = [
     {
         tag: "Free lesson",
@@ -25,5 +32,13 @@ export const LEARN_LINKS = [
         href: PLAYBOOK_URL,
         cta: "See the ebook",
         footerLabel: "The Playbook",
+    },
+    {
+        tag: "Ebook",
+        title: "Sell Your PDF",
+        desc: `A ${SELL_PDF_PAGES}-page guide to making and selling digital products in Nigeria. ${SELL_PDF_PRICE_LABEL}, instant PDF download.`,
+        href: SELL_PDF_URL,
+        cta: "See the ebook",
+        footerLabel: "Sell Your PDF",
     },
 ] as const;

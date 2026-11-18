@@ -12,6 +12,7 @@ const navLinks = [
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "AI Guide", href: "/ai" },
+    { name: "Sell PDFs", href: "/sell-your-pdf" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -48,7 +49,7 @@ export default function Navbar() {
                 </motion.a>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex gap-12 items-center">
+                <div className="hidden xl:flex gap-8 2xl:gap-12 items-center">
                     {navLinks.map((link, i) => (
                         <motion.a
                             key={link.name}
@@ -72,7 +73,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Toggle */}
-                <div className="lg:hidden">
+                <div className="xl:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-foreground">
                         {isOpen ? <X /> : <Menu />}
                     </button>
@@ -84,7 +85,7 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
-                    className="lg:hidden bg-white border-t border-accent/10 px-6 py-8 flex flex-col gap-6"
+                    className="xl:hidden bg-white border-t border-accent/10 px-6 py-8 flex flex-col gap-6"
                 >
                     {navLinks.map((link) => (
                         <a

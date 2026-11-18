@@ -13,8 +13,19 @@ import {
     WHAT_AI_IS,
     type Confidence,
 } from "@/content/ai-guide";
-import { PLAYBOOK_URL, PROMPT_LESSON_URL } from "@/lib/playbook-config";
+import Image from "next/image";
+import {
+    PLAYBOOK_URL,
+    PORTFOLIO_URL,
+    PROMPT_LESSON_URL,
+    SELL_PDF_COVER,
+    SELL_PDF_FULL_TITLE,
+    SELL_PDF_PRICE_LABEL,
+    SELL_PDF_URL,
+} from "@/lib/playbook-config";
 import CtaLink from "@/components/playbook/CtaLink";
+import SellPdfBuyButton from "@/components/sellpdf/SellPdfBuyButton";
+import { TocCtas } from "./AuthorCtas";
 
 const H2 = "scroll-mt-6 text-3xl font-extrabold tracking-tight md:text-4xl";
 const EYEBROW = "mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-[#D9540B]";
@@ -34,7 +45,7 @@ function Badge({ label }: { label: Confidence }) {
     );
 }
 
-/** Dev-only marker. Replace with a real example of how you used AI in your own work. */
+/** A real example from the author's own work. */
 export function AuthorExample() {
     return (
         <aside className="my-8 rounded-2xl border-l-8 border-[#F26A1B] bg-[#FFF1E6] p-6">
@@ -48,6 +59,14 @@ export function AuthorExample() {
             <p className="mt-3 text-sm font-semibold text-[#1A1A1F]/75">
                 That is one real example, not a typical result or a promise. What you earn
                 depends on your skills, your market and the work you put in.
+            </p>
+            <p className="mt-4">
+                <a
+                    href={PORTFOLIO_URL}
+                    className="font-bold text-[#D9540B] underline underline-offset-4 focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-[#D9540B]"
+                >
+                    See my portfolio <span aria-hidden="true">→</span>
+                </a>
             </p>
         </aside>
     );
@@ -81,10 +100,13 @@ export function TableOfContents() {
             </details>
 
             <aside className="hidden lg:block">
-                <nav aria-label="On this page" className="sticky top-6 rounded-2xl border border-[#EBDDD2] bg-[#FFF8F2] p-4">
-                    <p className="mb-2 px-2 text-xs font-extrabold uppercase tracking-[0.16em] text-[#D9540B]">On this page</p>
-                    {links}
-                </nav>
+                <div className="sticky top-6 space-y-4">
+                    <nav aria-label="On this page" className="rounded-2xl border border-[#EBDDD2] bg-[#FFF8F2] p-4">
+                        <p className="mb-2 px-2 text-xs font-extrabold uppercase tracking-[0.16em] text-[#D9540B]">On this page</p>
+                        {links}
+                    </nav>
+                    <TocCtas />
+                </div>
             </aside>
         </>
     );
@@ -271,6 +293,43 @@ export function FullPlan() {
                 <CtaLink href={PLAYBOOK_URL} location="ai_guide_playbook" variant="onOrange" large className="mt-6 w-full sm:w-auto">
                     See the Playbook
                 </CtaLink>
+            </div>
+        </section>
+    );
+}
+
+/** A separate book from the Playbook, shown as its own card under "Want the full plan?". */
+export function SellPdfOffer() {
+    return (
+        <section id="sell-your-pdf" className="pb-12 md:pb-14">
+            <div className="flex flex-col gap-6 rounded-3xl border border-[#1A1A1F]/10 bg-[#FFF1E6] p-6 sm:flex-row sm:items-center md:p-8">
+                <Image
+                    src={SELL_PDF_COVER}
+                    alt={`Cover of ${SELL_PDF_FULL_TITLE}`}
+                    width={800}
+                    height={800}
+                    sizes="(min-width: 640px) 176px, 160px"
+                    className="size-40 shrink-0 rounded-2xl sm:size-44"
+                />
+                <div>
+                    <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Sell Your PDF</h2>
+                    <p className="mt-3 text-lg text-[#1A1A1F]/90">
+                        Ready to create and sell your own PDF product? A 51-page guide for Nigerian
+                        creators, from picking a niche to a 30-day launch plan.
+                    </p>
+                    <p className="mt-3 text-2xl font-extrabold text-[#D9540B]">{SELL_PDF_PRICE_LABEL}</p>
+                    <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+                        <SellPdfBuyButton location="ai_guide_sellpdf" className="w-full sm:w-auto">
+                            Get it on Selar
+                        </SellPdfBuyButton>
+                        <a
+                            href={SELL_PDF_URL}
+                            className="text-center font-bold text-[#D9540B] underline underline-offset-4 focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-[#D9540B]"
+                        >
+                            Read more
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     );

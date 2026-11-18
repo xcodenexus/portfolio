@@ -3,6 +3,7 @@ import {
     PLAYBOOK_URL,
     PORTFOLIO_URL,
     PROMPT_LESSON_URL,
+    SELL_PDF_URL,
     WHATSAPP_URL,
 } from "@/lib/playbook-config";
 
@@ -28,6 +29,7 @@ export default function SiteFooter() {
                     <li><a href={AI_GUIDE_URL} className={LINK}>AI, explained simply</a></li>
                     <li><a href={PROMPT_LESSON_URL} className={LINK}>Free prompt lesson</a></li>
                     <li><a href={PLAYBOOK_URL} className={LINK}>The AI Side Hustle Playbook</a></li>
+                    <li><a href={SELL_PDF_URL} className={LINK}>Sell Your PDF</a></li>
                 </ul>
 
                 <p className="mt-8 max-w-3xl text-sm">
