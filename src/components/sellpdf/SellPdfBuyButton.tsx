@@ -8,6 +8,8 @@ interface SellPdfBuyButtonProps {
     location: string;
     variant?: Variant;
     large?: boolean;
+    /** Smaller padding and text, for use in cards and bars. */
+    compact?: boolean;
     className?: string;
     children: React.ReactNode;
 }

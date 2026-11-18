@@ -25,7 +25,7 @@ import {
 } from "@/lib/playbook-config";
 import CtaLink from "@/components/playbook/CtaLink";
 import SellPdfBuyButton from "@/components/sellpdf/SellPdfBuyButton";
-import { TocCtas } from "./AuthorCtas";
+import { SellPdfSideCard, TocCtas } from "./AuthorCtas";
 
 const H2 = "scroll-mt-6 text-3xl font-extrabold tracking-tight md:text-4xl";
 const EYEBROW = "mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-[#D9540B]";
@@ -106,6 +106,7 @@ export function TableOfContents() {
                         {links}
                     </nav>
                     <TocCtas />
+                    <SellPdfSideCard />
                 </div>
             </aside>
         </>

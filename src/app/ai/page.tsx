@@ -1,5 +1,5 @@
 import PageShell from "@/components/playbook/PageShell";
-import { ClosingBlock, HeroCtas } from "@/components/ai/AuthorCtas";
+import { ClosingBlock, HeroCtas, SellPdfStrip } from "@/components/ai/AuthorCtas";
 import StickyContactBar, { AI_HERO_ID } from "@/components/ai/StickyContactBar";
 import Faq, { faqJsonLd } from "@/components/playbook/Faq";
 import {
@@ -73,6 +73,8 @@ export default function AiGuidePage() {
                     <span aria-hidden="true">·</span>
                     <span>{READING_MINUTES} min read</span>
                 </p>
+
+                <SellPdfStrip />
 
                 <div className="pb-10 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
                     <TableOfContents />

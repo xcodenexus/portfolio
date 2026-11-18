@@ -1,5 +1,71 @@
-import { CONTACT_URL, PORTFOLIO_URL, WHATSAPP_AI_URL } from "@/lib/playbook-config";
+import Image from "next/image";
+import {
+    CONTACT_URL,
+    PORTFOLIO_URL,
+    SELL_PDF_COVER,
+    SELL_PDF_PRICE_LABEL,
+    SELL_PDF_URL,
+    WHATSAPP_AI_URL,
+} from "@/lib/playbook-config";
 import CtaLink from "@/components/playbook/CtaLink";
+import SellPdfBuyButton from "@/components/sellpdf/SellPdfBuyButton";
+
+/** Orange card beside the table of contents (desktop), under the "Work with me" card. */
+export function SellPdfSideCard() {
+    return (
+        <div className="pb-hero hidden rounded-2xl p-4 text-[#1A1A1F] lg:block">
+            <div className="flex items-center gap-3">
+                <Image
+                    src={SELL_PDF_COVER}
+                    alt="Cover of Sell Your PDF"
+                    width={56}
+                    height={56}
+                    className="size-14 shrink-0 rounded-lg ring-2 ring-white/70"
+                />
+                <div>
+                    <p className="text-xs font-extrabold uppercase tracking-[0.16em]">New ebook</p>
+                    <p className="text-lg font-extrabold leading-tight text-white">Start selling PDFs</p>
+                </div>
+            </div>
+            <SellPdfBuyButton location="ai_side_sellpdf" variant="onOrange" compact className="mt-3 w-full">
+                Get it on Selar, {SELL_PDF_PRICE_LABEL}
+            </SellPdfBuyButton>
+            <a
+                href={SELL_PDF_URL}
+                className="mt-2 block text-center text-sm font-bold underline underline-offset-4 focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1F]"
+            >
+                Read more
+            </a>
+        </div>
+    );
+}
+
+/** Slim orange strip under the hero for phones and tablets, where the sidebar is hidden. */
+export function SellPdfStrip() {
+    return (
+        <div className="pb-hero mb-2 flex items-center gap-3 rounded-2xl p-3 text-[#1A1A1F] lg:hidden">
+            <Image
+                src={SELL_PDF_COVER}
+                alt="Cover of Sell Your PDF"
+                width={56}
+                height={56}
+                className="size-14 shrink-0 rounded-lg ring-2 ring-white/70"
+            />
+            <div className="min-w-0 flex-1">
+                <p className="font-extrabold leading-tight text-white">Start selling PDFs</p>
+                <a
+                    href={SELL_PDF_URL}
+                    className="text-sm font-bold underline underline-offset-4 focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1F]"
+                >
+                    Read more
+                </a>
+            </div>
+            <SellPdfBuyButton location="ai_strip_sellpdf" variant="onOrange" compact className="shrink-0">
+                Get it, {SELL_PDF_PRICE_LABEL}
+            </SellPdfBuyButton>
+        </div>
+    );
+}
 
 /** Two buttons under the hero headline: the portfolio and the contact form. */
 export function HeroCtas() {
