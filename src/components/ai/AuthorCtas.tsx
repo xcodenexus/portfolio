@@ -77,6 +77,15 @@ export function HeroCtas() {
             <CtaLink href={CONTACT_URL} location="ai_hero_contact" variant="light" large className="w-full sm:w-auto">
                 Contact me
             </CtaLink>
+            <CtaLink
+                href={SELL_PDF_URL}
+                location="ai_hero_sellpdf"
+                variant="ghost"
+                large
+                className="w-full !border-[#1A1A1F] !text-[#1A1A1F] hover:!bg-white/30 sm:w-auto"
+            >
+                Sell PDFs <span aria-hidden="true" className="ml-2">→</span>
+            </CtaLink>
         </div>
     );
 }
