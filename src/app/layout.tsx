@@ -4,6 +4,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ScrollToTop from "@/components/ScrollToTop";
+import GoogleAnalyticsEvents from "@/components/GoogleAnalyticsEvents";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +12,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const GA_MEASUREMENT_ID = "G-KGVZPSNXC7";
 const SMARTSUPP_KEY = "9493ecafa61c11c304e8d1290bd4370a6ee5e1ce";
 
 export const metadata: Metadata = {
@@ -25,10 +27,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics 4 */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased`}
       >
         <ScrollToTop />
+        <GoogleAnalyticsEvents />
         {children}
         <Analytics />
         <SpeedInsights />
